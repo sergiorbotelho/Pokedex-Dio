@@ -14,6 +14,39 @@ body {
     background-color: #fff;
 }
 
+.modal-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: all ease 0.5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 99;
+   
+
+}
+
+
+
+.backdrop {
+    background: rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px);
+    transition: all ease 0.5s;
+}
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;
