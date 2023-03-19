@@ -1,3 +1,5 @@
-# Trilha JS Developer - Pokedex
+Pokedex
 
-### Em contrução a area de detalhes.
+Pokedex craido em JavaScript para estudo geral da Linguagem.
+
+https://sergiorbotelho.github.io/Pokedex-Dio/
