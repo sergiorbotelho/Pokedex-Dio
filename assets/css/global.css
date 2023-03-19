@@ -27,7 +27,7 @@ body {
     align-items: center;
     overflow-y: auto;
     z-index: 99;
-   
+
 
 }
 
@@ -54,4 +54,15 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+
+    .container-area .line {
+        width: 380px;
+    }
+
+    .container-area .line .select1,
+    .container-area .line .select2 {
+        width: 380px;
+    }
+
+
 }

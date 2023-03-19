@@ -1,7 +1,12 @@
 const pokemonList = document.getElementById('pokemonList');
 const loadMoreButton = document.getElementById('loadMoreButton');
 const c = (el) => document.querySelector(el);
-const backgroundModal = document.querySelector('.top')
+const backgroundModal = document.querySelector('.top');
+const about = document.querySelector('#about');
+const baseStats = document.querySelector('#base-stats');
+
+
+
 c('button').addEventListener('click', (e) => {
     // e.preventDefault()
     c('.modal-area').style.display = 'none'
@@ -66,7 +71,17 @@ function loadPokemonItens(offset, limit) {
                 c('.img').setAttribute('src', listPoke[i].photo)
                 c('.modal span').innerHTML = `#${listPoke[i].number}`
                 colors = listPoke[i].type;
+                c('.header h2').innerHTML = listPoke[i].name;
                 backgroundModal.classList.add(listPoke[i].type);
+                c('.height').innerHTML = listPoke[i].height
+                c('.weight').innerHTML = listPoke[i].weight
+                c('.abilities').innerHTML = listPoke[i].abilities.join(', ');
+                c('.hp').innerHTML = listPoke[i].baseStats[0];
+                c('.atack').innerHTML = listPoke[i].baseStats[2];
+                c('.defense').innerHTML = listPoke[i].baseStats[4];
+                c('.spAtack').innerHTML = listPoke[i].baseStats[6];
+                c('.spDefense').innerHTML = listPoke[i].baseStats[8];
+                c('.speed').innerHTML = listPoke[i].baseStats[10];
 
             })
 
@@ -97,6 +112,24 @@ loadMoreButton.addEventListener('click', () => {
 
     }
 
+})
+
+
+about.addEventListener('click', ()=>{
+    c('.select1').classList.add('roxo');
+    c('.select2').classList.remove('roxo');
+    c('#about').style.color = '#000';
+    c('#base-stats').style.color = '#DDD';
+    c('.base-stats').classList.add('display-none');
+    c('.about').classList.remove('display-none');
+})
+baseStats.addEventListener('click', ()=>{
+    c('.select2').classList.add('roxo');
+    c('.select1').classList.remove('roxo');
+    c('#base-stats').style.color = '#000';
+    c('#about').style.color = '#DDD';
+    c('.about').classList.add('display-none');
+    c('.base-stats').classList.remove('display-none');
 })
 
 
